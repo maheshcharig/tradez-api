@@ -9,6 +9,7 @@ from flask_sqlalchemy import get_debug_queries
 # from application.api.backtest.BacktestController import backtest_api
 # from application.api.auth.AuthController import auth_api
 from application.extensions import db, migrate, jwt, mail, cors
+from application.config import DevelopmentConfig
 from werkzeug.exceptions import default_exceptions
 
 
@@ -41,7 +42,8 @@ def create_app(config_name):
 
 
 def configure_app(app, config_name=None):
-    config_module = f"application.config.{config_name.capitalize()}Config"
+    # config_module = f"application.config.{config_name.capitalize()}Config"
+    config_module = DevelopmentConfig
     app.config.from_object(config_module)
 
 
