@@ -1,6 +1,6 @@
 from flask import Flask
 from flask_sqlalchemy import get_debug_queries
-# from application.api.users.UserController import user_api
+from application.api.users.UserController import user_api
 # from application.api.stock.StockController import stock_api
 # from application.api.stock.StockPriceController import stock_price_api
 # from application.api.stock.StockScreenerController import stock_screener_api
@@ -62,8 +62,7 @@ def configure_extensions(app):
 
 
 def configure_blueprint(app):
-    pass
-    # app.register_blueprint(user_api)
+    app.register_blueprint(user_api)
     # app.register_blueprint(stock_api)
     # app.register_blueprint(stock_price_api)
     # app.register_blueprint(stock_screener_api)
