@@ -59,7 +59,8 @@ class BaseListController(Resource):
     paging_schema = None
 
     # @verify_token
-    def get(current_user, self):
+    # def get(current_user, self):
+    def get(self):
         res = ServiceResponse()
         paging_filter = request.args.get('paging_filter', 1, type=int)
         order_by = request.args.get('order_by', 'updated_at', type=str)
