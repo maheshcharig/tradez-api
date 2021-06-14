@@ -16,9 +16,9 @@ def create_app(config_name):
 
     app = Flask(__name__)
     # configure_app(app, config_name)
-    # configure_hook(app)
-    # configure_blueprint(app)
-    # configure_extensions(app)
+    configure_hook(app)
+    configure_blueprint(app)
+    configure_extensions(app)
 
     @app.errorhandler(Exception)
     def handle_error(e):
