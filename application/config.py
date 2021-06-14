@@ -15,7 +15,7 @@ class Config(object):
     # SQLALCHEMY_DATABASE_URI = (
     #     f"postgresql+psycopg2://{user}:{password}@{hostname}:{port}/{database}"
     # )
-    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
+    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL_POSTGRESQL")
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 
