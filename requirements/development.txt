@@ -1,0 +1,5 @@
+-r testing.txt
+
+docker-compose
+pandas_datareader
+plotly
