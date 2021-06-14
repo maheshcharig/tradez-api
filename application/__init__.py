@@ -16,7 +16,7 @@ from werkzeug.exceptions import default_exceptions
 def create_app(config_name):
 
     app = Flask(__name__)
-    # configure_app(app, config_name)
+    configure_app(app, config_name)
     configure_hook(app)
     configure_blueprint(app)
     configure_extensions(app)
