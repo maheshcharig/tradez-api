@@ -58,7 +58,7 @@ class BaseListController(Resource):
     list_schema = None
     paging_schema = None
 
-    @verify_token
+    # @verify_token
     def get(current_user, self):
         res = ServiceResponse()
         paging_filter = request.args.get('paging_filter', 1, type=int)
